@@ -279,12 +279,12 @@
         <script type="text/javascript">
             
             $("#first-page #row-one").on('click', function() {
-               $("#first-page").slideUp('slow');
+               $("#first-page").animate({ height: 'hide' }, "slow");;
                $("#second-page").css("display", "block");
             });
             
             $("#second-page #banner").on('click', function() {
-                $("#first-page").slideDown('slow'); 
+                $("#first-page").animate({ height: 'show' }, "slow");; 
                 $("#second-page").css("display", "none");
                
             });
