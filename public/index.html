@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CodeBox IO</title>
+        <title>Cloud 9 App</title>
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <style type="text/css">
             
@@ -21,6 +21,7 @@
             
             #second-page {
                 z-index:9;
+                display:none;
             }
             
             .row {
@@ -278,10 +279,12 @@
         <script type="text/javascript">
             
             $("#first-page #row-one").on('click', function() {
-               $("#first-page").slideDown('slow'); 
+               $("#first-page").slideDown('slow');
+               $("#second-page").css("display", "block");
             });
             
             $("#second-page #banner").on('click', function() {
+                $("#second-page").css("display", "none");
                $("#first-page").slideUp('slow'); 
             });
             
