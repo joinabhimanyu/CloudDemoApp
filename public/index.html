@@ -279,13 +279,14 @@
         <script type="text/javascript">
             
             $("#first-page #row-one").on('click', function() {
-               $("#first-page").slideDown('slow');
+               $("#first-page").slideUp('slow');
                $("#second-page").css("display", "block");
             });
             
             $("#second-page #banner").on('click', function() {
+                $("#first-page").slideDown('slow'); 
                 $("#second-page").css("display", "none");
-               $("#first-page").slideUp('slow'); 
+               
             });
             
         </script>
