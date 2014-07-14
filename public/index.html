@@ -284,12 +284,12 @@
         
         <script type="text/javascript">
             
-            $("#first-page #row-one").on('click', function() {
+            $("#first-page #row-one .jumbotron h1").on('click', function() {
                $("#first-page").velocity("transition.bounceUpOut", 1250);
                $("#second-page").css("display", "block");
             });
             
-            $("#second-page #banner").on('click', function() {
+            $("#second-page #banner span").on('click', function() {
                 
                 $("#second-page").velocity("transition.bounceDownOut", 1250);
                 $("#first-page").velocity("transition.bounceUpIn", 1250);
