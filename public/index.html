@@ -273,20 +273,23 @@
             </div>
         </div>
         
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.velocity.min.js"></script>
+		<script type="text/javascript" src="js/velocity.ui.js"></script>
         
         <script type="text/javascript">
             
             $("#first-page #row-one").on('click', function() {
-               $("#first-page").animate({ height: 'hide' }, "slow");;
+               $("#first-page").velocity("transition.bounceUpOut", 1250);
                $("#second-page").css("display", "block");
             });
             
             $("#second-page #banner").on('click', function() {
-                $("#first-page").animate({ height: 'show' }, "slow");; 
-                $("#second-page").css("display", "none");
-               
+                
+                $("#second-page").velocity("transition.bounceDownOut", 1250);
+                $("#first-page").velocity("transition.bounceUpIn", 1250);
             });
             
         </script>
