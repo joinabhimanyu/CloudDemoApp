@@ -11,7 +11,7 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 
 var router = express.Router();
 
@@ -25,7 +25,7 @@ router.use(function(req, res, next) {
     });
 
 app.use('/app', router);
-app.listen(4000, function() {
+app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
    console.log('server started'); 
 });
 
